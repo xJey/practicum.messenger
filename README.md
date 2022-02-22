@@ -5,6 +5,9 @@
 Проект задеплоин на Netlify
 https://goofy-galileo-a1f63c.netlify.app/
 
+Ссылка на PR
+https://github.com/xJey/practicum.messenger/pull/1
+
 ## Технологии
 
 - parcel
