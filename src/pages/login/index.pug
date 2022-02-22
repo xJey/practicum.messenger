@@ -1,0 +1,19 @@
+extends /../../index.pug
+
+block append link
+  link(rel="stylesheet", href="/src/pages/login/login.scss")
+      
+block content 
+  include /../../components/button/button.pug
+  include /../../components/link/link.pug
+  include /../../components/input/input.pug
+
+  .login
+    .login-wrapper 
+      .login-data 
+        h1.login-title Вход
+        +input('login', 'login', 'Логин')
+        +input('password', 'password', 'Пароль')
+      .login-button
+        +button('Войти')
+        +link('Нет аккаунта?', '/pages/registration', 'smallText')

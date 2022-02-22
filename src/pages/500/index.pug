@@ -1,0 +1,10 @@
+extends /../../index.pug
+
+block append link
+  link(rel="stylesheet", href="/src/pages/500/500.scss")
+      
+block content 
+  div.wrapperBackendError
+    p.titleBackendError 500
+    p.descriptionBackendError Мы уже фиксим
+    a.linkBackendError(href="/") Назад к чатам

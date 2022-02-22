@@ -1,0 +1,10 @@
+extends /../../index.pug
+
+block append link
+  link(rel="stylesheet", href="/src/pages/404/404.scss")
+      
+block content 
+  div.wrapperBackendError
+    p.titleBackendError 404
+    p.descriptionBackendError Не туда попали
+    a.linkBackendError(href="/") Назад к чатам
