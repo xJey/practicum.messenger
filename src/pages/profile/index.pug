@@ -1,0 +1,32 @@
+extends /../../index.pug
+
+block append link
+  link(rel="stylesheet", href="/src/pages/profile/profile.scss")
+      
+block content 
+  include /../../components/link/link.pug
+  include /../../components/input-profile/input-profile.pug
+  include /../../components/avatar/avatar.pug
+
+  .profile-block
+    aside.back
+
+      a(href="/pages/login" class='back-link')
+
+    section.profile
+      .profile-wrapper
+        +avatar
+        p.profile-name Иван
+        .profile-data
+          +inputProfile('email', 'email', 'Почта', 'pochta@yandex.ru')
+          +inputProfile('login', 'login', 'Логин', 'ivanivanov')
+          +inputProfile('first_name', 'first_name', 'Имя', 'Иван')
+          +inputProfile('second_name', 'second_name', 'Фамилия', 'Иванов')
+          +inputProfile('display_name', 'display_name', 'Имя в чате', 'Иван')
+          +inputProfile('phone', 'phone', 'Телефон', '+7 (909) 967 30 30')
+        
+        .profile-footer
+          +link('Изменить данные', '/', 'border-bottom')
+          +link('Изменить пароль', '/', 'border-bottom')
+          +link('Выйти', '/', 'text-red')
+

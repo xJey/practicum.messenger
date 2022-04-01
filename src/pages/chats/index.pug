@@ -1,0 +1,21 @@
+extends /../../index.pug
+
+block append link
+  link(rel="stylesheet", href="/src/pages/chats/chats.scss")
+      
+block content 
+  include /../../components/input-search/input-search.pug
+
+  .chats
+    aside.chats-block
+      .chats-block-head
+        .head-block
+          a(href="/pages/login" class='head-link') Профиль
+            span(class=['arrow', 'right'])
+          
+          +input-search('search', 'search', 'Поиск')
+      .chats-block-list 
+
+    section.message-feed
+      .message-feed-wrapper
+        p.message-feed-title Выберите чат чтобы отправить сообщение

@@ -1,0 +1,26 @@
+@import './../../styles/description.scss';
+
+.backend-error {
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  &-title {
+    @include big-title;
+    margin-bottom: 20px;
+  }
+
+  &-description {
+    @include title;
+    margin-bottom: 69px;
+  }
+
+  &-link {
+    @include text-link;
+    color: $color-blue;
+  }
+}

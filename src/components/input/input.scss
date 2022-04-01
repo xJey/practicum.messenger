@@ -1,0 +1,69 @@
+@import './../../styles/description.scss';
+
+.text-field {
+  max-width: 280px;
+  width: 100%;
+}
+
+.text-field_floating {
+  position: relative;
+  
+
+  .text-field__input {
+    width: 100%;
+    height: 37px;
+    padding: 7px 1px;
+    border: none;
+    border-bottom: 1px solid $color-blue;
+
+    &::-moz-placeholder {
+      color: transparent;
+    }
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:focus,
+    :not(:placeholder-shown) {
+      padding-top: 7px;
+      padding-bottom: 7px;
+    }
+
+    &:focus~.text-field__label,
+    &:not(:placeholder-shown)~.text-field__label {
+      transform: scale(.85) translateY(-21px) translateX(0px);
+    }
+  }
+
+  .text-field__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 14px 0 7px 1px;
+    pointer-events: none;
+    border: 1px solid transparent;
+    transform-origin: 0 0;
+    transition: opacity .15s ease-in-out, transform .15s ease-in-out;
+    color: $color-light-gray3;
+
+    
+  }
+}
+
+.text-field__message {
+  @include input-lable;
+  display: none;
+  width: 100%;
+  margin-top: 7px;
+  padding-left: 1px;
+}
+
+.text-field__message_invalid {
+  color: $color-red;
+}
+
+.text-field__message_invalid,
+.text-field__message_valid {
+  display: block;
+}

@@ -1,0 +1,8 @@
+mixin avatar()
+  .avatar 
+    label.avatar-label(for="file")
+      span Поменять<br>аватар
+    input.avatar-input(type="file" id="file" name="avatar")
+    img(src="/src/components/avatar/icon/union.svg", alt="")
+
+script(src="/src/components/avatar/avatar.js" type="module") 

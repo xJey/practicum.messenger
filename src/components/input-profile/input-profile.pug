@@ -1,0 +1,9 @@
+mixin inputProfile(inputId, inputName, inputLabel, inputValue = '', errorText = '')
+  div(class='profile-field profile-field_floating')
+    input(class='profile-field__input' name=inputName type=inputName id=inputId value=inputValue placeholder=inputLabel autocomplete='off')
+    label(class='profile-field__label' for=inputId)= inputLabel
+
+    if errorText
+      div(class="profile-field__message profile-field__message_invalid")= errorText
+
+script(src="/src/components/input-profile/input-profile.js" type="module")

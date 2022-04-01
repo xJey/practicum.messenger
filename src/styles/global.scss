@@ -1,0 +1,43 @@
+@import './colors.scss';
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: $color-main;
+  font-size: 13px;
+  line-height: 13px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+button,
+input {
+  outline: none;
+}
+
+input[type="text"] {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+}

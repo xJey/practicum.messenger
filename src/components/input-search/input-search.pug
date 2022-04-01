@@ -1,0 +1,8 @@
+mixin input-search(inputId, inputName, inputLabel, inputValue = '')
+  div(class='input-search input-search_floating')
+    input(class='input-search__input' name=inputName type=inputName id=inputId value=inputValue placeholder='placeholder' autocomplete='off')
+    label(class='input-search__label' for=inputId)= inputLabel
+      span.input-search__icon
+        img(src="/src/components/input-search/icon/lens.svg", alt="lens")
+
+script(src="/src/components/input-search/input-search.js" type="module")

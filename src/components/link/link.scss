@@ -1,0 +1,19 @@
+@import './../../styles/description.scss';
+
+
+.link {
+  color: $color-blue;
+  text-align: center;
+}
+
+.text-red {
+  color: $color-red;
+}
+
+.border-bottom {
+  border-bottom: 1px solid $color-light-gray4;
+}
+
+.smallText {
+  @include text-link;
+}

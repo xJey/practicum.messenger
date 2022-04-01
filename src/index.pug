@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="/src/main.scss")
+        block link
+
+        title Messenger
+        block script
+
+    body
+        main.main
+            block content
+                h1 Переходы на страницы
+                .wrapper 
+                    a(href="/pages/profile") Страница Профиля
+                    a(href="/pages/chats") Страница Чатов
+                    a(href="/pages/login") Страница Авторизации
+                    a(href="/pages/registration") Страница Регистрации
+                    a(href="/pages/404") Страница 404
+                    a(href="/pages/500") Страница 5**

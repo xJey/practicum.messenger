@@ -1,0 +1,9 @@
+mixin input(inputId, inputName, inputLabel, inputValue = '', errorText = '')
+  div(class='text-field text-field_floating')
+    input(class='text-field__input' name=inputName type=inputName id=inputId value=inputValue placeholder='placeholder' autocomplete='off')
+    label(class='text-field__label' for=inputId)= inputLabel
+
+    if errorText
+      div(class="text-field__message text-field__message_invalid")= errorText
+
+script(src="/src/components/input/input.js" type="module")

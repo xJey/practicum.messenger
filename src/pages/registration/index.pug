@@ -1,0 +1,24 @@
+extends /../../index.pug
+
+block append link
+  link(rel="stylesheet", href="/src/pages/registration/registration.scss")
+      
+block content 
+  include /../../components/button/button.pug
+  include /../../components/link/link.pug
+  include /../../components/input/input.pug
+
+  .registration
+    .registration-wrapper 
+      .registration-data 
+        h1.registration-title Регистрация
+        +input('email', 'email', 'Почта')
+        +input('login', 'login', 'Логин')
+        +input('first_name', 'first_name', 'Имя')
+        +input('second_name', 'second_name', 'Фамилия')
+        +input('phone', 'phone', 'Телефон')
+        +input('password', 'password', 'Пароль')
+        +input('password-repeat', 'password', 'Пароль (еще раз)')
+      .registration-button
+        +button('Зарегистрироваться')
+        +link('Войти', '/pages/login', 'smallText')
